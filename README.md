@@ -25,6 +25,9 @@
 - Além dessas, ainda foram utilizadas algumas outras ferramentas:
   - [JSON Cidades do Brasil](https://gist.github.com/letanure/3012978)
   - [Gson](https://github.com/google/gson)
+  - [FlatLaf](https://www.formdev.com/flatlaf/)
   - [DB Browser for SQLite](https://sqlitebrowser.org/)
+  - [Canva](https://canva.com)
+  - [PlantText](https://www.planttext.com/)
 
 ### Galeria de Fotos
