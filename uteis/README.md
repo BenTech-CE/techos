@@ -1,0 +1,16 @@
+# Ferramentas utilizadas na criação do TechOS
+- [Java Swing](https://www.oracle.com/br/java/) - Biblioteca de interfaces gráficas
+- [Apache NetBeans](https://netbeans.apache.org/front/main/index.html) - IDE utilizada
+- [SQLite](https://www.sqlite.org/) - Banco de dados utilizado
+- [SQLite JDBC](https://github.com/xerial/sqlite-jdbc) - Biblioteca para acessar e criar bancos de dados SQLite
+- [DBeaver Community](https://dbeaver.io/) - Usado na modelagem de banco de dados
+- [JSON Cidades do Brasil](https://gist.github.com/letanure/3012978) - Usado na Agenda de Contatos
+- [Gson](https://github.com/google/gson) - Biblioteca para interpretação de JSON
+- [SLF4J](https://www.slf4j.org/) - Biblioteca de *logging* (dependência do SQLite JDBC)
+- [FlatLaf](https://www.formdev.com/flatlaf/) - Biblioteca para modernizar o Swing
+- [DB Browser for SQLite](https://sqlitebrowser.org/) - Visualizador de bancos de dados SQLite
+- [Canva](https://canva.com) - Usado na apresentação em slide
+- [PlantText](https://www.planttext.com/) - Usado na criação dos diagramas UML
+- [YouTube, Professor Crenilson](https://www.youtube.com/@ProfessorCrenilson) - Professor que fez tutoriais de como fazer a Agenda de Contatos
+- [Discord](https://discord.com) - Calls e comunicação
+- [Chat GPT](https://chatgpt.com) - Dicas e resolvedor de problemas
