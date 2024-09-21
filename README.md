@@ -1,4 +1,4 @@
-<img src="https://github.com/BenTech-CE/techos/blob/main/design/bentechpreto.png?raw=true" width="600px">
+<img src="https://github.com/BenTech-CE/techos/blob/main/design/bentechtechos.png?raw=true" width="400px">
 
 # TechOS
 ### ❓ O que é o TechOS?
