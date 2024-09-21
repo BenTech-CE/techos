@@ -27,12 +27,6 @@ O TechOS não seria possível sem as tecnologias mais envolventes do mercado, aq
 | <a href="https://netbeans.apache.org/front/main/index.html"><img src="https://github.com/BenTech-CE/techos/blob/main/icons/netbeans.png?raw=true" width="50px"></a> | [Apache NetBeans](https://netbeans.apache.org/front/main/index.html) |
 | <a href="https://www.sqlite.org/"><img src="https://github.com/BenTech-CE/techos/blob/main/icons/sqlite.png?raw=true" width="50px"></a> | [SQLite](https://www.sqlite.org/) |
 
-Além dessas, ainda foram utilizadas algumas outras ferramentas:
-  - [JSON Cidades do Brasil](https://gist.github.com/letanure/3012978)
-  - [Gson](https://github.com/google/gson)
-  - [FlatLaf](https://www.formdev.com/flatlaf/)
-  - [DB Browser for SQLite](https://sqlitebrowser.org/)
-  - [Canva](https://canva.com)
-  - [PlantText](https://www.planttext.com/)
-  - [YouTube, Prof Crenilson](https://www.youtube.com/@ProfessorCrenilson)
-  - [Chat GPT](chatgpt.com)
+Além dessas, ainda foram utilizadas algumas outras ferramentas que estão descritas no **README.md** da pasta **uteis**:
+
+[Clique aqui para ver as outras ferramentas](https://github.com/BenTech-CE/techos/tree/main/uteis)
