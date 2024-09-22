@@ -11,6 +11,6 @@
 - [DB Browser for SQLite](https://sqlitebrowser.org/) - Visualizador de bancos de dados SQLite
 - [Canva](https://canva.com) - Usado na apresentação em slide
 - [PlantText](https://www.planttext.com/) - Usado na criação dos diagramas UML
-- [YouTube, Professor Crenilson](https://www.youtube.com/@ProfessorCrenilson) - Professor que fez tutoriais de como fazer a Agenda de Contatos
+- [YouTube, Professor Crenilson](https://www.youtube.com/@ProfessorCrenilson) - Professor que fez tutoriais de como fazer a estrutura básica da Agenda de Contatos
 - [Discord](https://discord.com) - Calls e comunicação
 - [Chat GPT](https://chatgpt.com) - Dicas e resolvedor de problemas
