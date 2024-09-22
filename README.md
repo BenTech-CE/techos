@@ -14,7 +14,7 @@ O sistema vem com vários aplicativos pré-instalados, tais como:
 - **📒 Agenda de Contatos:**
     - O problema que muitas pessoas têm de esquecer contatos está resolvido! Com essa Agenda de Contatos do TechOS, você consegue criar, ler, atualizar e deletar contatos de forma rápida e fácil. Além disso, a Agenda de Contatos não se limita apenas ao nome e telefone do usuário, você consegue colocar diversas outras informações ao seu contato, como: apelido, tipo de contato (separar contatos é sempre bom para não se perder), endereço e uma descrição totalmente personalizável.
 - **📖 Bíblia Sagrada:**
-    - Pensando, também, na santificação e aprendizado teológico dos nossos usuários, colocamos no TechOS a Bíblia Sagrada. A versão NVI fornece entendimento claro das escrituras sagradas e linguagem simples e concisa, que facilita a interpretação correta, aspecto importante na jornada cristã. Com esse aplicativo, você tem acesso a todos os livros da bíblia coloridos de acordo com sua classificação:
+    - Pensando, também, na santificação e aprendizado teológico dos nossos usuários, colocamos no TechOS a Bíblia Sagrada. A versão NVI fornece entendimento claro das escrituras sagradas e linguagem simples e concisa, que facilita a interpretação correta dos textos, aspecto importante na jornada cristã. Com esse aplicativo, você tem acesso a todos os livros da bíblia coloridos de acordo com sua classificação:
       - Velho Testamento: Pentateuco, Históricos, Poéticos e Proféticos.
       - Novo Testamento: Evangelhos, Histórico(At), Cartas e Revelação(Ap).
 Essa diferenciação facilita a busca dos livros e o entendimento claro das relações intertextuais bíblicas.
