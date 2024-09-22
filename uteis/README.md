@@ -11,6 +11,9 @@
 - [DB Browser for SQLite](https://sqlitebrowser.org/) - Visualizador de bancos de dados SQLite
 - [Canva](https://canva.com) - Usado na apresentação em slide
 - [PlantText](https://www.planttext.com/) - Usado na criação dos diagramas UML
+- [Church Worship Support](https://altamiro.comunidades.net/biblias) - Banco de dados pronto para uso com diversas versões da Bíblia Sagrada
+- [FlatIcon](https://www.flaticon.com/) - Ícones gratuitos
 - [YouTube, Professor Crenilson](https://www.youtube.com/@ProfessorCrenilson) - Professor que fez tutoriais de como fazer a estrutura básica da Agenda de Contatos
+- [Blog de Morten Nobel](https://blog.nobel-joergensen.com/2009/01/18/changing-preferred-size-of-a-html-jlabel/) - Código de determinar altura de uma JLabel com HTML embutido
 - [Discord](https://discord.com) - Calls e comunicação
 - [Chat GPT](https://chatgpt.com) - Dicas e resolvedor de problemas
