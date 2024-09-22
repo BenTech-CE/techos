@@ -11,16 +11,16 @@ A BenTech viu a necessidade de um sistema que unisse eficiência, design sofisti
 
 ### ❓ O que vem no TechOS?
 O sistema vem com vários aplicativos pré-instalados, tais como:
-  - **📒 Agenda de Contatos:**
+- **📒 Agenda de Contatos:**
     - O problema que muitas pessoas têm de esquecer contatos está resolvido! Com essa Agenda de Contatos do TechOS, você consegue criar, ler, atualizar e deletar contatos de forma rápida e fácil. Além disso, a Agenda de Contatos não se limita apenas ao nome e telefone do usuário, você consegue colocar diversas outras informações ao seu contato, como: apelido, tipo de contato (separar contatos é sempre bom para não se perder), endereço e uma descrição totalmente personalizável.
 - **📖 Bíblia Sagrada:**
     - Pensando, também, na santificação e aprendizado teológico dos nossos usuários, colocamos no TechOS a Bíblia Sagrada. A versão NVI fornece entendimento claro das escrituras sagradas e linguagem simples e concisa, que facilita a interpretação correta, aspecto importante na jornada cristã. Com esse aplicativo, você tem acesso a todos os livros da bíblia coloridos de acordo com sua classificação:
-      -Velho Testamento: Pentateuco, Históricos, Poéticos e Proféticos.
-      -Novo Testamento: Evangelhos, Histórico(At), Cartas e Revelação(Ap).
+      - Velho Testamento: Pentateuco, Históricos, Poéticos e Proféticos.
+      - Novo Testamento: Evangelhos, Histórico(At), Cartas e Revelação(Ap).
 Essa diferenciação facilita a busca dos livros e o entendimento claro das relações intertextuais bíblicas.
-  - **🧮 Calculadora (Normal e de IMC):**
+- **🧮 Calculadora (Normal e de IMC):**
     - Embrace a tecnologia com essa nova invenção nunca vista antes: a Calculadora. Esse aplicativo lhe permite realizar os mais diversos cálculos matemáticos de forma prática e simples. Com poucos cliques você consegue resolver cálculos que demoraria muito tempo nos métodos antigos. Além disso, há um extra: a Calculadora de IMC, um cálculo de extrema importância para saber se você está no peso ideal, que facilitamos para você. Apenas coloque o seu peso e sua altura e você descobrirá a sua classificação e seu peso ideal.
-  - **🎮 Jogo Flappy Bird e Jogo da Velha:**
+- **🎮 Jogo Flappy Bird e Jogo da Velha:**
     - Um sistema operacional sempre precisa de diversão, e com isso trazemos o famoso jogo Flappy Bird, renovado e com um design cartoon. O objetivo é simples: atravesse com o pássaro pelos obstáculos para conseguir a maior pontuação possível! Em se tratando de jogos, nunca é demais, não é verdade? Por isso trouxemos outra opção de jogo: o Jogo da Velha. O jogo é conhecido e amado por todos. O objetivo é formar uma sequência de 3 símbolos na diagonal, horizontal ou vertical. Tendo esses jogos, não há nada melhor para desestressar (ou talvez estressar).
 
 ### ❓ Como o TechOS foi feito?
