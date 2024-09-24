@@ -4,13 +4,11 @@
  */
 package br.edu.calculadora.telas;
 
+import br.edu.calculadora.CalculadoraIMC;
 import br.edu.calculadora.CalculadoraNormal;
 import br.edu.desktop.tela.Desktop;
 import com.formdev.flatlaf.FlatClientProperties;
-import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
-import com.formdev.flatlaf.themes.FlatMacLightLaf;
-import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -30,6 +28,16 @@ public class TelaCalculadora extends javax.swing.JFrame {
         calculadoraNormal = calcNormal;
     }
 
+    private CalculadoraIMC calculadoraIMC;
+
+    public CalculadoraIMC getCalculadoraIMC() {
+        return calculadoraIMC;
+    }
+
+    public void setCalculadoraIMC(CalculadoraIMC calcIMC) {
+        calculadoraIMC = calcIMC;
+    }
+
     /**
      * Creates new form TelaCalculadora
      */
@@ -40,6 +48,8 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
         calculadoraNormal.setTelaCalculadora(this);
         calculadoraNormal.setDisplay(inputCalculator);
+
+        setCalculadoraIMC(new CalculadoraIMC());
     }
 
     /**
@@ -467,11 +477,6 @@ public class TelaCalculadora extends javax.swing.JFrame {
         alturamjTextField.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         alturamjTextField.setForeground(new java.awt.Color(255, 255, 255));
         alturamjTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        alturamjTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                alturamjTextFieldActionPerformed(evt);
-            }
-        });
 
         PesokgjLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         PesokgjLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -482,11 +487,6 @@ public class TelaCalculadora extends javax.swing.JFrame {
         pesokgjTextField.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         pesokgjTextField.setForeground(new java.awt.Color(255, 255, 255));
         pesokgjTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pesokgjTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pesokgjTextFieldActionPerformed(evt);
-            }
-        });
 
         IMCjLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         IMCjLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -498,16 +498,11 @@ public class TelaCalculadora extends javax.swing.JFrame {
         imcjTextField.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         imcjTextField.setForeground(new java.awt.Color(255, 255, 255));
         imcjTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        imcjTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imcjTextFieldActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<html><p style=\"text-align: center;\">Informe a altura em metros e o seu peso quilogramas(kg)</p></html>");
+        jLabel1.setText("<html><p style=\"text-align: center;\">Informe a altura em metros e o seu peso  em quilogramas(kg)</p></html>");
 
         calcularimcjButton.setBackground(new java.awt.Color(51, 51, 51));
         calcularimcjButton.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -756,62 +751,35 @@ public class TelaCalculadora extends javax.swing.JFrame {
         telaSobre.setVisible(true);
     }//GEN-LAST:event_btnSobreMouseClicked
 
-    private void alturamjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alturamjTextFieldActionPerformed
-
-    }//GEN-LAST:event_alturamjTextFieldActionPerformed
-
-    private void pesokgjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesokgjTextFieldActionPerformed
-
-    }//GEN-LAST:event_pesokgjTextFieldActionPerformed
-
-    private void imcjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imcjTextFieldActionPerformed
-
-    }//GEN-LAST:event_imcjTextFieldActionPerformed
-
     private void calcularimcjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularimcjButtonActionPerformed
         String pesoKgStr = pesokgjTextField.getText();
         String alturaMStr = alturamjTextField.getText();
 
         if (pesoKgStr.length() > 0 && alturaMStr.length() > 0) {
-            limparjButton2.setEnabled(true);
-            String FaixaPeso = "0";
-
             try {
-                double AlturaM = Double.parseDouble(alturaMStr.replaceAll(",", "."));
-                double PesoKG = Double.parseDouble(pesoKgStr);
-                double Imc;
-
-                Imc = PesoKG / (Math.pow(AlturaM, 2));
-                imcjTextField.setText(String.format("%.2f", Imc));
-
-                if (Imc < 16) {
-                    FaixaPeso = "Magreza grave";
-                } else if (Imc >= 16 && Imc <= 16.9) {
-                    FaixaPeso = "Magreza moderada";
-                } else if (Imc >= 17 && Imc <= 18.5) {
-                    FaixaPeso = "Magreza leve";
-                } else if (Imc >= 18.6 && Imc <= 24.9) {
-                    FaixaPeso = "Peso ideal";
-                } else if (Imc >= 25 && Imc <= 29.9) {
-                    FaixaPeso = "Sobrepeso";
-                } else if (Imc >= 30 && Imc <= 34.9) {
-                    FaixaPeso = "Obesidade grau I";
-                } else if (Imc >= 35 && Imc <= 39.9) {
-                    FaixaPeso = "Obesidade grau II ou severa";
-                } else if (Imc > 40) {
-                    FaixaPeso = "Obesidade grau III ou mórbida";
+                calculadoraIMC.calcularImc(alturaMStr, pesoKgStr);
+                double AlturaM = calculadoraIMC.getAltura();
+                double PesoKG = calculadoraIMC.getPesokg();
+                double Imc = calculadoraIMC.getImc();
+                
+                if (Double.isNaN(Imc) || Double.isInfinite(Imc) || AlturaM <= 0 || PesoKG <= 0) {
+                    JOptionPane.showMessageDialog(null, "Erro! Insira os valores corretamente.", "Erro", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    limparjButton2.setEnabled(true);
+                    imcjTextField.setText(String.format("%.2f", Imc));
+                    faixapesojLabel.setText("Sua faixa de peso: " + calculadoraIMC.FaixaPeso);
+                    String historyAdd = "IMC: " + String.format("%.2f", Imc) + " - " + calculadoraIMC.FaixaPeso + " - Altura: " + AlturaM + " - Peso: " + PesoKG;
+                    ArrayList<String> history = calculadoraNormal.getHistory();
+                    history.add("<html><b style=\"font-size: 9px\">" + historyAdd + "</b></html>");
+                    calculadoraNormal.setHistory(history);                    
                 }
 
-                faixapesojLabel.setText("Sua faixa de peso: " + FaixaPeso);
-                String historyAdd = "IMC: " + String.format("%.2f", Imc) + " - " + FaixaPeso + " - Altura: " + AlturaM + " - Peso: " + PesoKG;
-                ArrayList<String> history = calculadoraNormal.getHistory();
-                history.add("<html><b style=\"font-size: 9px\">" + historyAdd + "</b></html>");
-                calculadoraNormal.setHistory(history);
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Erro! Utilize apenas números.");
+
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Erro! Utilize apenas números.", "Erro", JOptionPane.ERROR_MESSAGE);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Insira os valores requeridos!");
+            JOptionPane.showMessageDialog(null, "Insira os valores requeridos!", "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_calcularimcjButtonActionPerformed
 
@@ -878,6 +846,8 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
                 calculadoraNormal.setTelaCalculadora(telaCalculadora);
                 calculadoraNormal.setDisplay(telaCalculadora.inputCalculator);
+
+                telaCalculadora.setCalculadoraIMC(new CalculadoraIMC());
             }
         });
     }

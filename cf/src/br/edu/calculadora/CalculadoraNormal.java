@@ -32,6 +32,10 @@ public class CalculadoraNormal {
 
     public String isNotDivZero = "Não é possivel dividir por 0";
 
+    public Boolean checkEnabledButtons() {
+        return getDisplayText().equals("NaN") || getDisplayText().equals(isNotDivZero) || getDisplayText().equals("Infinity");
+    }
+
     public String getDisplayText() {
         return display.getText();
     }
@@ -40,8 +44,8 @@ public class CalculadoraNormal {
         display.setText(str);
     }
 
-    public void resetButtonsEnabledDisplayFont() {
-        setDisplayText("0");
+    public void resetButtonsEnabledDisplayFont(String number) {
+        setDisplayText(number);
         display.setFont(new Font("Dialog", Font.BOLD, 32));
     }
 
@@ -77,9 +81,9 @@ public class CalculadoraNormal {
     }
 
     public void onClickNumber(java.awt.event.ActionEvent e) {
-        if (getDisplayText().equals(isNotDivZero)) {
+        if (checkEnabledButtons()) {
             telaCalculadora.setEnabledIfDivZero(true);
-            resetButtonsEnabledDisplayFont();
+            resetButtonsEnabledDisplayFont(e.getActionCommand());
         } else {
             if (getDisplayText().length() < 16) {
                 String num;
@@ -97,9 +101,9 @@ public class CalculadoraNormal {
     }
 
     public void onClickDelete() {
-        if (getDisplayText().equals(isNotDivZero)) {
+        if (checkEnabledButtons()) {
             telaCalculadora.setEnabledIfDivZero(true);
-            resetButtonsEnabledDisplayFont();
+            resetButtonsEnabledDisplayFont("0");
         } else {
             String num = getDisplayText();
             if (!num.equals("")) {
@@ -109,9 +113,9 @@ public class CalculadoraNormal {
     }
 
     public void onClickAC() {
-        if (getDisplayText().equals(isNotDivZero)) {
+        if (checkEnabledButtons()) {
             telaCalculadora.setEnabledIfDivZero(true);
-            resetButtonsEnabledDisplayFont();
+            resetButtonsEnabledDisplayFont("0");
         }
         num1 = 0;
         num2 = 0;
@@ -120,9 +124,9 @@ public class CalculadoraNormal {
     }
 
     public void onClickOperator(java.awt.event.ActionEvent e) {
-        if (getDisplayText().equals(isNotDivZero)) {
+        if (checkEnabledButtons()) {
             telaCalculadora.setEnabledIfDivZero(true);
-            resetButtonsEnabledDisplayFont();
+            resetButtonsEnabledDisplayFont("0");
         } else {
             if (!getDisplayText().replaceAll(" ", "").equals("")) {
                 String displayText = getDisplayText().replace(",", ".");
@@ -136,9 +140,9 @@ public class CalculadoraNormal {
     }
 
     public void onClickPoint(java.awt.event.ActionEvent e) {
-        if (getDisplayText().equals(isNotDivZero)) {
+        if (checkEnabledButtons()) {
             telaCalculadora.setEnabledIfDivZero(true);
-            resetButtonsEnabledDisplayFont();
+            resetButtonsEnabledDisplayFont("0,");
         } else {
             onChangeDisplay();
             String num = "";
@@ -156,7 +160,7 @@ public class CalculadoraNormal {
     }
 
     public void onClickResult(java.awt.event.ActionEvent e) {
-        if (!getDisplayText().replaceAll(" ", "").equals("") && !getDisplayText().equals(isNotDivZero) && symbol != null) {
+        if (!getDisplayText().replaceAll(" ", "").equals("") && !checkEnabledButtons()) {
             String displayText = getDisplayText().replace(",", ".");
 
             if (selectNum2) {
@@ -166,59 +170,60 @@ public class CalculadoraNormal {
                 selectNum2 = true;
             }
 
-            switch (symbol) {
-                case "+":
-                    res = num1 + num2;
-                    break;
-                case "-":
-                    res = num1 - num2;
-                    break;
-                case "×":
-                    res = num1 * num2;
-                    break;
-                case "÷":
-                    try {
-                        if (selectNum2 && (int) num2 == 0) {
+            if (symbol != null) {
+                switch (symbol) {
+                    case "+":
+                        res = num1 + num2;
+                        break;
+                    case "-":
+                        res = num1 - num2;
+                        break;
+                    case "×":
+                        res = num1 * num2;
+                        break;
+                    case "÷":
+                        try {
+                            if (selectNum2 && (int) num2 == 0) {
+                                setDisplayText(isNotDivZero);
+                                display.setText(isNotDivZero);
+                                display.setFont(new Font("Dialog", Font.BOLD, 18));
+                                telaCalculadora.setEnabledIfDivZero(false);
+                            } else {
+                                res = num1 / num2;
+                            }
+                        } catch (ArithmeticException err) {
                             setDisplayText(isNotDivZero);
                             display.setText(isNotDivZero);
                             display.setFont(new Font("Dialog", Font.BOLD, 18));
                             telaCalculadora.setEnabledIfDivZero(false);
-                        } else {
-                            res = num1 / num2;
+                            err.printStackTrace();
                         }
-                    } catch (ArithmeticException err) {
-                        setDisplayText(isNotDivZero);
-                        display.setText(isNotDivZero);
-                        display.setFont(new Font("Dialog", Font.BOLD, 18));
-                        telaCalculadora.setEnabledIfDivZero(false);
-                        err.printStackTrace();
+                        break;
+                    case "%":
+                        res = (num1 * num2) / 100.0;
+                        break;
+                    default:
+                        res = 0.0;
+                }
+                if (!checkEnabledButtons()) {
+                    String result = String.format("%.2f", res);
+                    if (result.endsWith("00")) {
+                        result = String.format("%.0f", res);
                     }
-                    break;
-                case "%":
-                    res = (num1 * num2) / 100.0;
-                    break;
-                default:
-                    res = 0.0;
-            }
-            if (!getDisplayText().equals(isNotDivZero)) {
-                String result = String.format("%.2f", res);
-                if (result.endsWith("00")) {
-                    result = String.format("%.0f", res);
-                }
-                if (result.length() > 16) {
-                    setDisplayText(result);
-                    onChangeDisplay();
-                } else {
-                    setDisplayText(result);
-                }
-                if (!symbol.equals("")) {
-                    history.add(num1 + " " + symbol + " " + num2 + " = " + res);
+                    if (result.length() > 16) {
+                        setDisplayText(result);
+                        onChangeDisplay();
+                    } else {
+                        setDisplayText(result);
+                    }
+                    if (!symbol.equals("")) {
+                        history.add(num1 + " " + symbol + " " + num2 + " = " + res);
+                    }
                 }
             }
-
         } else {
             telaCalculadora.setEnabledIfDivZero(true);
-            resetButtonsEnabledDisplayFont();
+            resetButtonsEnabledDisplayFont("0");
             num1 = 0;
             num2 = 0;
             symbol = "";
