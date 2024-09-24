@@ -63,7 +63,7 @@ public class WidgetRelogio extends javax.swing.JPanel {
             jLabel1.setFont(sf56);
         }
             
-        jLabel1.setText(novoTitulo);        
+        jLabel1.setText(novoTitulo);
     }
 
     /**
