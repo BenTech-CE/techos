@@ -35,3 +35,15 @@ O TechOS não seria possível sem as tecnologias mais envolventes do mercado, aq
 Além dessas, ainda foram utilizadas algumas outras ferramentas que estão descritas no **README.md** da pasta **uteis**:
 
 [Clique aqui para ver as outras ferramentas](https://github.com/BenTech-CE/techos/tree/main/uteis)
+
+### 🖼️ Galeria de Fotos
+<details>
+    <summary>Clique para ver</summary>
+    <img src="https://github.com/BenTech-CE/techos/blob/main/design/telas/Login.png?raw=true" />
+    <img src="https://github.com/BenTech-CE/techos/blob/main/design/telas/Desktop.png?raw=true" />
+    <img src="https://github.com/BenTech-CE/techos/blob/main/design/telas/AgendaDeContatos.png?raw=true" />
+    <img src="https://github.com/BenTech-CE/techos/blob/main/design/telas/Calculadora.png?raw=true" />
+    <img src="https://github.com/BenTech-CE/techos/blob/main/design/telas/FlappyBird.png?raw=true" />
+    <img src="https://github.com/BenTech-CE/techos/blob/main/design/telas/JogoDaVelha.png?raw=true" />
+    <img src="https://github.com/BenTech-CE/techos/blob/main/design/telas/BibliaSagrada.png?raw=true" />
+</details>
