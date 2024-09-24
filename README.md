@@ -1,4 +1,4 @@
-<img src="https://github.com/BenTech-CE/techos/blob/main/design/bentechtechos.png?raw=true" width="400px">
+<img src="https://github.com/BenTech-CE/techos/blob/main/design/logos/bentechtechos.png?raw=true" width="400px">
 
 # TechOS
 ### ❓ O que é o TechOS?
@@ -28,9 +28,9 @@ O TechOS não seria possível sem as tecnologias mais envolventes do mercado, aq
 
 | Ícone | Nome |
 | :-: | :-: |
-| <a href="https://www.oracle.com/br/java/"><img src="https://github.com/BenTech-CE/techos/blob/main/icons/java.webp?raw=true" width="50px"></a> | [Java Swing](https://www.oracle.com/br/java/) |
-| <a href="https://netbeans.apache.org/front/main/index.html"><img src="https://github.com/BenTech-CE/techos/blob/main/icons/netbeans.png?raw=true" width="50px"></a> | [Apache NetBeans](https://netbeans.apache.org/front/main/index.html) |
-| <a href="https://www.sqlite.org/"><img src="https://github.com/BenTech-CE/techos/blob/main/icons/sqlite.png?raw=true" width="50px"></a> | [SQLite](https://www.sqlite.org/) |
+| <a href="https://www.oracle.com/br/java/"><img src="https://github.com/BenTech-CE/techos/blob/main/icons/util/java.webp?raw=true" width="50px"></a> | [Java Swing](https://www.oracle.com/br/java/) |
+| <a href="https://netbeans.apache.org/front/main/index.html"><img src="https://github.com/BenTech-CE/techos/blob/main/icons/util/netbeans.png?raw=true" width="50px"></a> | [Apache NetBeans](https://netbeans.apache.org/front/main/index.html) |
+| <a href="https://www.sqlite.org/"><img src="https://github.com/BenTech-CE/techos/blob/main/icons/util/sqlite.png?raw=true" width="50px"></a> | [SQLite](https://www.sqlite.org/) |
 
 Além dessas, ainda foram utilizadas algumas outras ferramentas que estão descritas no **README.md** da pasta **uteis**:
 
