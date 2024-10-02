@@ -31,15 +31,32 @@ public class APIClima {
     private static ImageIcon iconParcNubladoNoite = new ImageIcon(APIClima.class.getResource("/br/edu/desktop/widgets/clima/img/parcnubladonoite.png"));
     
     public static Clima carregarClima() throws MalformedURLException, IOException {
-        URL api = new URL("https://api.open-meteo.com/v1/forecast?latitude=-3.744362&longitude=-38.536043&current=temperature_2m,is_day,weather_code&daily=temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min&timezone=auto&forecast_days=1");
-        HttpURLConnection con = (HttpURLConnection) api.openConnection();
+        URL api;
+        InputStream is;
+        Reader leitor;
+        HttpURLConnection con;
+        
+        api = new URL("http://ip-api.com/json");
+        con = (HttpURLConnection) api.openConnection();
         con.setRequestProperty("accept", "application/json");
 
-        InputStream is = con.getInputStream();
-        Reader leitor = new InputStreamReader(is);
+        is = con.getInputStream();
+        leitor = new InputStreamReader(is);
         
-        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
-        Clima clima = gson.fromJson(leitor, Clima.class);
+        Gson gson = new GsonBuilder().create();
+        IP ip = gson.fromJson(leitor, IP.class);
+        
+        api = new URL("https://api.open-meteo.com/v1/forecast?latitude="+ip.getLat()+"&longitude="+ip.getLon()+"&current=temperature_2m,is_day,weather_code&daily=temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min&timezone=auto&forecast_days=1");
+        con = (HttpURLConnection) api.openConnection();
+        con.setRequestProperty("accept", "application/json");
+
+        is = con.getInputStream();
+        leitor = new InputStreamReader(is);
+        
+        Gson gsonUnderline = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+        Clima clima = gsonUnderline.fromJson(leitor, Clima.class);
+        
+        clima.setCity(ip.getCity());
         
         return clima;
     }

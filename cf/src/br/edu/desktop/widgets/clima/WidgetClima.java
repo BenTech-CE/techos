@@ -56,6 +56,7 @@ public class WidgetClima extends javax.swing.JPanel {
         }
         
         if (clima != null) {
+            jlCidade.setText(clima.getCity());
             jlTemp.setText("" + Math.round(clima.getCurrent().getTemperature2m()) + "º");
             jlMaxMin.setText("Máx.: " + Math.round(clima.getDaily().getApparentTemperatureMax()[0]) + "º  Mín.: " + Math.round(clima.getDaily().getTemperature2mMin()[0]) + "º");
             

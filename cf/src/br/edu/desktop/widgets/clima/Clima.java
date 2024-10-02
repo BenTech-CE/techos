@@ -20,6 +20,15 @@ public class Clima {
     private Object dailyUnits;
     private ClimaAtual current;
     private ClimaDiario daily;
+    private String city;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public double getLatitude() {
         return latitude;
